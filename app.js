@@ -62,7 +62,7 @@ router.post('/login', async (req, res) => {
 
 
 app.use(express.json());
-app.use(cors({origin:'http://localhost:4200'}));
+app.use(cors({origin:'*'}));
 app.use('/api/usuarios',require('./routes/usuario.routes'));
 app.use('/api/empleados',require('./routes/empleado.routes'));
 app.listen(3005, ()=> {
